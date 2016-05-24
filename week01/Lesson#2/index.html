@@ -4,15 +4,15 @@
     <link rel=stylesheet href="css/style.css">
     <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
-<main>
+<div class=wrap>
     <header>
         <a href=# role=button class=turn-back>Go back</a>
         <a href=# class=header-logo></a>
         <a href=# role=button class=sighn-in>Sign in</a>
     </header>
-    <div>
-        <header class="header-form">
-            <article class="header-order">
+    <main>
+        <header class=header-form>
+            <article class=header-order>
                 <h2>Your order</h2>
                 <ul>
                     <li>
@@ -29,20 +29,48 @@
                         <span>48 hours<sub>*</sub></span>
                 </ul>
 
-                <div>
+                <div class=order-button>
                     <button>Place order</button>
                     <button>Print a quote</button>
                 </div>
             </article>
-            <article>
+            <article class=header-help>
                 <h2>Help Center</h2>
                 <p>If you need assistance while placing your order, contact one of our beloved Project Manager by phone email</p>
-                <p>+971(0)555 555
-                    <span>help@qtest.com</span>
+                <p class=help-contacts>+971(0)555 555
+                    <a href="mailto:help@qtest.com">help@qtest.com</a>
                 </p>
             </article>
         </header>
-    </div>
-</main>
+        <section class=form-section>
+            <h1>Select what you want to translate</h1>
+            <div class="fom-services">
+                <a href=#>
+                    <img src="https://api.fnkr.net/testimg/350x200/00CED1/#9deac0/?text=img">
+                </a>
+                <a href=#>
+                    <img src="https://api.fnkr.net/testimg/350x200/00CED1/#6242c4/?text=img">
+                </a>
+                <a href=#>
+                    <img src="https://api.fnkr.net/testimg/350x200/00CED1/#74c285/?text=img">
+                </a>
+            </div>
+        </section>
+        <form action=# method=# name=huge-form>
+            <fieldset>
+                <legend>
+                    Ulpoad your documents
+                    <span></span>
+
+                    <label class="file-upload">
+                        <span>Upload a new file</span>
+                        <input name="uploadfile" multiple="" type="file" id="myFile" hidden>
+                    </label> 
+                </legend>
+            </fieldset>
+        </form>
+    </main>
+</div>
 
 <script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/custom.js"></script>

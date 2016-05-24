@@ -6,13 +6,13 @@ body{
     background: #ECEEF4;
 }
 
-main{
+.wrap{
     max-width: 1036px;
     width: 100%;
     margin: 0 auto;
 }
 
-main > header{
+.wrap > header{
     position: relative;
     text-align: center;
 }
@@ -51,20 +51,179 @@ main > header{
 .header-form{
     width: 100%;
     background: #fff;
-    border: 1px solid #C9D0E1;
-    border-radius: 3px;
-    padding: 28px 0 0 37px;
     box-sizing: border-box;
+    display: inline-block;
 }
 
-.header-order h2{
-
+.header-order h2,
+.header-help h2{
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0px 0px 14px 0px;
+    color: #6E768F;
 }
 
-.header-order h2:before{
+.header-order h2:before,
+.header-help h2:before{
     content: "";
     display: inline-block;
     width: 16px;
     height: 20px;
     background: url(../img/ico01.png);
+    margin: 0px 12px 0 0px;
+    position: relative;
+    top: 3px;
+}
+
+.header-help h2:before{
+    width: 19px;
+    height: 18px;
+    background: url(../img/ico02.png);
+}
+
+.header-order{
+    width: 64%;
+    float: left;
+}
+
+.header-help{
+    width: 33%;
+    float: right;
+}
+
+.header-order ul{
+    width: 70%;
+    display: block;
+    clear: both;
+}
+
+.header-order li{
+    float: left;
+    width: 23%;
+    color: #6E768F;
+}
+
+.header-order li span{
+    display: block;
+    color: #B0ABC5;
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+.order-button{
+    width: 35%;
+    float: right;
+    margin-top: -34px;
+}
+
+.order-button button{
+    display: block;
+    max-width: 180px;
+    width: 100%;
+    height: 46px;
+    margin: 0 auto;
+    background: #0CA791;
+    border: 1px solid #386D65;
+    border-radius: 3px;
+    color: #fff;
+    margin-bottom: 7px;
+}
+.order-button button:hover{
+    background: #386D65;
+}
+
+.order-button button + button{
+    background: #DADDE7;
+    border: 1px solid #6E768F;
+    color: #6E768F;
+    margin-bottom: 0;
+}
+.order-button button + button:hover{
+    background: #6E768F;
+    color: #DADDE7;
+}
+
+.header-help p{
+    padding: 0px 33px;
+    font-size: 12px;
+    color: #B4B0D8;
+}
+
+.help-contacts{
+    margin: 8px 0px 0 0px;
+}
+
+.header-help .help-contacts{
+    color: #6E768F;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 9px 0 0 0px;
+    font-size: 12px;
+}
+
+.help-contacts a{
+    color: #6E768F;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 0 0 8px;
+    font-size: 12px;
+}
+
+main{
+    background: white;
+    border: 1px solid #C9D0E1;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 28px 37px;
+}
+
+.form-section{
+    text-align: center;
+}
+
+.form-section h1{
+    font-size: 20px;
+    font-weight: normal;
+    color: #6E768F;
+    text-transform: uppercase;
+    margin: 34px 0px;
+    border-bottom: 1px solid #707890;
+    display: inline-block;
+    padding: 0 0 6px 0;
+}
+
+.fom-services{
+    width: 100%;
+    display: inline-block;
+}
+
+.fom-services > a{
+    float: left;
+    width: 30%;
+    margin: 0 48px 0 0;
+}
+
+.fom-services > a:last-child{
+    margin: 0;
+}
+
+.fom-services > a img{
+    width: 100%;
+}
+
+.file-upload {
+    overflow: hidden;
+    display: inline-block;
+    position: relative;    
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #707070;
+    background: #A0A0A0;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    text-shadow: #000 1px 1px 4px;
+    cursor:pointer;
 }
