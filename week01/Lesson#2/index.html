@@ -45,29 +45,165 @@
         <section class=form-section>
             <h1>Select what you want to translate</h1>
             <div class="fom-services">
-                <a href=#>
-                    <img src="https://api.fnkr.net/testimg/350x200/00CED1/#9deac0/?text=img">
-                </a>
-                <a href=#>
-                    <img src="https://api.fnkr.net/testimg/350x200/00CED1/#6242c4/?text=img">
-                </a>
-                <a href=#>
-                    <img src="https://api.fnkr.net/testimg/350x200/00CED1/#74c285/?text=img">
-                </a>
+                <div class="customCheckbox">
+                    <input type=checkbox name= id=>
+                    <img src=# alt=Website>
+                    <p>Website</p>
+                </div>
+                <div class="customCheckbox">
+                    <input type=checkbox name= id=>
+                    <img src=# alt=Documents>
+                    <p>Documents</p>
+                </div>
+                <div class="customCheckbox">
+                    <input type=checkbox name= id=>
+                    <img src=# alt="Soccial accaount">
+                    <p>Soccial accaount</p>
+                </div>
             </div>
         </section>
-        <form action=# method=# name=huge-form>
+        <form action=# method=# name=huge-form class=huge-form>
             <fieldset>
                 <legend>
-                    Ulpoad your documents
+                    <span class=part-num>1</span>Ulpoad your documents
                     <span></span>
-
-                    <label class="file-upload">
-                        <span>Upload a new file</span>
-                        <input name="uploadfile" multiple="" type="file" id="myFile" hidden>
-                    </label> 
                 </legend>
+
+                <label class="file-upload">
+                    <span>Upload a new file</span>
+                    <input name="uploadfile" multiple="" type="file" id="myFile" hidden>
+                </label> 
+                    
+
+                <table class=table>
+                    <thead>
+                        <th class=filename>File Name
+                        <th class=filesize>File Size
+                        <th class=countwords>Number of words
+                        <th class=remove>Remove
+                    </thead>
+                    <tr>
+                        <td>buisness_operations.docx
+                        <td>78kb
+                        <td>842
+                        <td><img src=# alt=buscket>
+                    </tr>
+                    <tr>
+                        <td>buisness_financial.docx
+                        <td>26kb
+                        <td>2,236
+                        <td><img src=# alt=buscket>
+                    </tr>
+                </table>
             </fieldset>
+
+            <fieldset>
+                <legend>
+                    <span class=part-num>2</span>Choose your desired tone
+                </legend>
+
+                <div class="clearfix"></div>
+
+                <div class=lanblock>
+                    <label for=lanfrom>From</label>
+                    <select name=lanfrom id=lanfrom>
+                        <option value=English>English</option>
+                    </select>
+                    
+                    <label for=tolan>to</label>
+                    <select name=tolan id=tolan>
+                        <option value=Arabic>Arabic</option>
+                    </select>
+                    <select name=tolan id=tolan>
+                        <option value=Kurdish>Kurdish</option>
+                    </select>
+                    
+                    <button class="addlan-select">+ Add</button>
+                </div>
+                
+            </fieldset>
+            
+            <fieldset class=desire-tone>
+                <legend>
+                    <span class=part-num>3</span>Select your desired tone
+                </legend>
+
+                <div class="clearfix"></div>
+    
+                <div class="customCheckbox">
+                    <label for=>Friendly / Casual</label>
+                    <input type=checkbox name= id=>
+                </div>
+                <div class="customCheckbox">
+                    <label for=>Corporate / Pro</label>
+                    <input type=checkbox name= id=>
+                </div>
+                <div class="customCheckbox">
+                    <label for=>Media / Formal</label>
+                    <input type=checkbox name= id=>
+                </div>
+            </fieldset>        
+            
+            <fieldset class=urgent-job>
+                <legend>
+                    <span class=part-num>4</span>Tell us how urgent this job is
+                    <input type=range name=urgent-job id=urgent-job>
+                </legend>
+
+                <div class="clearfix"></div>
+
+                <div class=timline-info>
+                    timeline info
+
+                    <p>With an <span>average</span> timeline set up, our expert translator can take a ressonable amount of time prefecing your translation</p>
+                </div>
+            </fieldset>    
+
+            <fieldset class=payment-method>
+                <legend>
+                    <span class=part-num>5</span>Sign up and choose a payment method
+                </legend>
+
+                <div class="clearfix"></div>
+
+                <p>Already have an account with us? <a href=#>Sign in</a></p>
+
+                <label for=fullname>Full Name</label>
+                <input type=text name=fullname id=fullname>
+
+                <label for=email>Email Address</label>
+                <input type=text name=email id=email>
+
+                <div class="clearfix"></div>
+
+                <button>
+                    <img src=# alt=viso>
+                </button>
+                <button>
+                    <img src=# alt=paypall>
+                </button>
+                <button>
+                    <img src=# alt=amazon>
+                </button>
+
+                <div class="clearfix"></div>
+
+                <label for=cardnumber>Card Number</label>
+                <input type=text name=cardnumber id=cardnumber>
+
+                <label for=expirydate>Expiry Date</label>
+                <input type=date name=expirydate id=expirydate>
+
+                <label for=code>Code</label>
+                <input type=text name=code id=code>
+                
+                <input type=checkbox name=agree id=agree>
+                <span>I agree to the <a href=#>Terms & Conditions</a></span>
+
+                <button>Place Order</button>
+                <button>Print A Quote</button>
+            </fieldset>  
+
         </form>
     </main>
 </div>

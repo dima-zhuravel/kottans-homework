@@ -45,7 +45,7 @@ body{
 .sighn-in{
     width: 137px;
     float: right;
-    background: url(../img/signin.png)no-repeat 30px center
+    background: url(../img/signin.png)no-repeat 30px center;
 }
 
 .header-form{
@@ -215,15 +215,118 @@ main{
 .file-upload {
     overflow: hidden;
     display: inline-block;
-    position: relative;    
+    position: relative;
     vertical-align: middle;
     text-align: center;
-    color: #fff;
-    border: 2px solid #707070;
-    background: #A0A0A0;
+    color: #808080;
+    height: 43px;
+    border: 2px solid #A0A0A0;
+    background: #FFF;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     border-radius: 8px;
-    text-shadow: #000 1px 1px 4px;
-    cursor:pointer;
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 43px;
+    font-size: 12px;
+    padding: 0 16px;
+    margin: 7px 0 0 22px;
+}
+
+.huge-form fieldset{
+    margin: 20px 0 ;
+}
+
+.huge-form fieldset legend{
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: grey;
+    float: left;
+}
+
+.huge-form fieldset .part-num{
+    border: 1px solid grey;
+    padding: 2px 7px;
+    border-radius: 50px;
+    margin-right: 7px;
+    color: grey;
+}
+
+.huge-form .table{
+    width: 100%;
+    clear: both;
+    border-collapse: collapse;
+    border: 1px solid grey;
+    background: #E3E3E3;
+    margin-top: 20px;
+}
+
+.huge-form th{
+    text-align: left;
+    padding: 10px;
+}
+
+.huge-form td{
+    text-align: left;
+    padding: 0 10px 10px 10px;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.filename{
+    width: 35%;
+}
+
+.filesize{
+    width: 20%;
+}
+
+.countwords{
+    width: 25%;
+}
+
+.remove{
+    width: 20%;
+}
+
+.customCheckbox{
+    width: 200px;
+    height: 50px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    margin: 0 0 10px 0;
+}
+
+.fom-services .customCheckbox{
+   float: left;
+   height: 250px;
+   margin: 0 45px 0 0px;
+   width: 30%;
+}
+
+.fom-services .customCheckbox:last-child{
+    margin: 0;
+}
+
+.desire-tone{
+    width: 48%;
+    float: left;
+}
+
+.urgent-job{
+    width: 48%;
+    float: right;
+}
+
+.payment-method{
+    width: 100%;
+    clear: both;
+}
+
+.timline-info{
+    border: 1px solid #808080;
+    padding: 10px;
 }
