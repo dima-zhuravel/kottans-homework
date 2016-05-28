@@ -59,10 +59,18 @@ html{
         color: $font;
         background: transparent;
         &__place-order{
-            
+            margin-bottom: 12px;
+            background: $green;
+            border: 1px solid #44B5B0;
+            color: #fff;
+            &:hover{
+                background: #6fdbec;
+            }
         }
         &__print-quote{
-            
+            &:hover{
+                background: #c9d0e1;
+            }
         }
     }
     .header{
@@ -100,19 +108,31 @@ html{
     height: 148px;
     margin-bottom: 90px;
     border-bottom: 1px solid $border;
+    overflow: hidden;
     &__order{
-        width: 70%;
+        width: 68%;
+        padding: 26px 38px;
         float: left;
+        border-right: 1px solid #d5dae7;
+        @include pref(box-sizing, border-box);
     }
     &__help{
-        width: 30%;
+        width: 32%;
+        padding: 26px 38px;
         float: right;
+        @include pref(box-sizing, border-box);
+        &_description{
+            margin-top: 8px;
+            padding-left: 33px;
+            color: #B0B7CF;
+            font-size: 12px;
+            line-height: 14px;
+        }
     }
     &__title{
         display: block;
         font-size: 18px;
         font-weight: bold;
-        margin: 0px 0px 14px 0px;
         color: $font;
     }
     .title-order{
@@ -140,7 +160,11 @@ html{
         }
     }
     &__btn{
+        position: relative;
         display: inline-block;
+        vertical-align: top;
+        width: 25%;
+        top: -25px;
         &_item{
             display: block;
             width: 153px;
@@ -149,12 +173,34 @@ html{
     }
 }
 
-.order-list{
-    display: inline-flex;
-    justify-content: space-around;
-    width: 70%;
+.help-contacts{
+    padding-left: 33px;
     &__item{
+        all: unset;
+        display: inline-block;
+        margin-top: 14px;
+        padding-right: 14px;
+        font-size: 12px;
+        font-weight: 700;
+        color: $font;
+    }
+}
 
+.order-list{
+    display: inline-block;
+    width: 74%;
+    height: 100px;
+    padding: 25px 7px 0 20px;
+    vertical-align: top;
+    @include pref(box-sizing, border-box);
+    &__item{
+        display: inline-block;
+        width: 25%;
+        height: 75px;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $font;
     }
     &--format{
         font-size: 10px;
@@ -162,5 +208,10 @@ html{
     }
     &__subitem{
         display: block;
+        color: #B0B7CF;
+        margin-top: 7px;
+        font-size: 12px;
+        text-transform: lowercase;
+        font-weight: 400;
     }
 }

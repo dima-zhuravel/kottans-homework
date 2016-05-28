@@ -56,7 +56,22 @@ html {
   color: #6E768F;
   background: transparent;
 }
-/* line 68, ../sass/main.scss */
+/* line 61, ../sass/main.scss */
+.main-wrap .btn__place-order {
+  margin-bottom: 12px;
+  background: #5FCAC6;
+  border: 1px solid #44B5B0;
+  color: #fff;
+}
+/* line 66, ../sass/main.scss */
+.main-wrap .btn__place-order:hover {
+  background: #6fdbec;
+}
+/* line 71, ../sass/main.scss */
+.main-wrap .btn__print-quote:hover {
+  background: #c9d0e1;
+}
+/* line 76, ../sass/main.scss */
 .main-wrap .header {
   -webkit-display: flex;
   -ms-display: flex;
@@ -68,28 +83,28 @@ html {
   justify-content: space-between;
   align-items: center;
 }
-/* line 74, ../sass/main.scss */
+/* line 82, ../sass/main.scss */
 .main-wrap .header__go-back {
   background: url(../img/left.png) no-repeat 24px center;
 }
-/* line 77, ../sass/main.scss */
+/* line 85, ../sass/main.scss */
 .main-wrap .header__sign-in {
   background: url(../img/signin.png) no-repeat 24px center;
 }
-/* line 80, ../sass/main.scss */
+/* line 88, ../sass/main.scss */
 .main-wrap .header .btn {
   width: 148px;
   height: 47px;
   padding: 17px 0;
 }
-/* line 85, ../sass/main.scss */
+/* line 93, ../sass/main.scss */
 .main-wrap .header__logo {
   width: 91px;
   height: 91px;
   margin: auto;
 }
 
-/* line 93, ../sass/main.scss */
+/* line 101, ../sass/main.scss */
 .main {
   background: #fff;
   border: 1px solid #D5DAE7;
@@ -100,31 +115,52 @@ html {
   border-radius: 7px;
 }
 
-/* line 99, ../sass/main.scss */
+/* line 107, ../sass/main.scss */
 .head-form {
   height: 148px;
   margin-bottom: 90px;
   border-bottom: 1px solid #D5DAE7;
+  overflow: hidden;
 }
-/* line 103, ../sass/main.scss */
+/* line 112, ../sass/main.scss */
 .head-form__order {
-  width: 70%;
+  width: 68%;
+  padding: 26px 38px;
   float: left;
+  border-right: 1px solid #d5dae7;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
 }
-/* line 107, ../sass/main.scss */
+/* line 119, ../sass/main.scss */
 .head-form__help {
-  width: 30%;
+  width: 32%;
+  padding: 26px 38px;
   float: right;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
 }
-/* line 111, ../sass/main.scss */
+/* line 124, ../sass/main.scss */
+.head-form__help_description {
+  margin-top: 8px;
+  padding-left: 33px;
+  color: #B0B7CF;
+  font-size: 12px;
+  line-height: 14px;
+}
+/* line 132, ../sass/main.scss */
 .head-form__title {
   display: block;
   font-size: 18px;
   font-weight: bold;
-  margin: 0px 0px 14px 0px;
   color: #6E768F;
 }
-/* line 119, ../sass/main.scss */
+/* line 139, ../sass/main.scss */
 .head-form .title-order::before {
   content: "";
   position: relative;
@@ -135,7 +171,7 @@ html {
   margin: 0px 12px 0 0px;
   background: url(../img/ico01.png);
 }
-/* line 131, ../sass/main.scss */
+/* line 151, ../sass/main.scss */
 .head-form .title-help::before {
   content: "";
   position: relative;
@@ -146,29 +182,70 @@ html {
   margin: 0px 12px 0 0px;
   background: url(../img/ico02.png);
 }
-/* line 142, ../sass/main.scss */
+/* line 162, ../sass/main.scss */
 .head-form__btn {
+  position: relative;
   display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  top: -25px;
 }
-/* line 144, ../sass/main.scss */
+/* line 168, ../sass/main.scss */
 .head-form__btn_item {
   display: block;
   width: 153px;
   height: 47px;
 }
 
-/* line 152, ../sass/main.scss */
-.order-list {
-  display: inline-flex;
-  justify-content: space-around;
-  width: 70%;
+/* line 176, ../sass/main.scss */
+.help-contacts {
+  padding-left: 33px;
 }
-/* line 159, ../sass/main.scss */
+/* line 178, ../sass/main.scss */
+.help-contacts__item {
+  all: unset;
+  display: inline-block;
+  margin-top: 14px;
+  padding-right: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #6E768F;
+}
+
+/* line 189, ../sass/main.scss */
+.order-list {
+  display: inline-block;
+  width: 74%;
+  height: 100px;
+  padding: 25px 7px 0 20px;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 196, ../sass/main.scss */
+.order-list__item {
+  display: inline-block;
+  width: 25%;
+  height: 75px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #6E768F;
+}
+/* line 205, ../sass/main.scss */
 .order-list--format {
   font-size: 10px;
   color: #6E768F;
 }
-/* line 163, ../sass/main.scss */
+/* line 209, ../sass/main.scss */
 .order-list__subitem {
   display: block;
+  color: #B0B7CF;
+  margin-top: 7px;
+  font-size: 12px;
+  text-transform: lowercase;
+  font-weight: 400;
 }
