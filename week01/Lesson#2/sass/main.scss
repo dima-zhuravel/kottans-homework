@@ -1,0 +1,166 @@
+// @import "compass/reset";
+
+/*
+**Font
+*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+/*
+**MIXINS
+*/
+@mixin pref($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
+/*
+**Variables
+*/
+$orange: #FBBC7D;
+$mainbg: #ECEEF4;
+$blue: #77A7E0;
+$green: #5FCAC6;
+$foobg: #444A62;
+$font: #6E768F;
+$border: #D5DAE7;
+$ver: 'Open Sans', sans-serif;
+
+/*
+**Style
+*/
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+html{
+    background: $mainbg;
+}
+
+.main-wrap{
+    max-width: 1020px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: $ver;
+    @include pref(box-sizing, border-box);
+    .btn{
+        border: 1px solid #C9D0E1;
+        @include pref(box-sizing, border-box);
+        @include pref(border-radius, 3px);
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        font: bold 10px Verdana;
+        color: $font;
+        background: transparent;
+        &__place-order{
+            
+        }
+        &__print-quote{
+            
+        }
+    }
+    .header{
+        @include pref(display, flex);
+        width: 100%;
+        height: 118px;
+        justify-content: space-between;
+        align-items: center;
+        &__go-back{
+            background: url(../img/left.png)no-repeat 24px center;
+        }
+        &__sign-in{
+            background: url(../img/signin.png)no-repeat 24px center;
+        }
+        .btn{
+            width: 148px;
+            height: 47px;
+            padding: 17px 0;
+        }
+        &__logo{
+            width: 91px;
+            height: 91px;
+            margin: auto;
+        }
+    }
+}
+
+.main{
+    background: #fff;
+    border: 1px solid $border;
+    @include pref(border-radius, 7px);
+}
+
+.head-form{
+    height: 148px;
+    margin-bottom: 90px;
+    border-bottom: 1px solid $border;
+    &__order{
+        width: 70%;
+        float: left;
+    }
+    &__help{
+        width: 30%;
+        float: right;
+    }
+    &__title{
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0px 0px 14px 0px;
+        color: $font;
+    }
+    .title-order{
+        &::before{
+            content: "";
+            position: relative;
+            display: inline-block;
+            width: 16px;
+            height: 20px;
+            top: 3px;
+            margin: 0px 12px 0 0px;
+            background: url(../img/ico01.png);
+        }
+    }
+    .title-help{
+        &::before{
+            content: "";
+            position: relative;
+            display: inline-block;
+            width: 19px;
+            height: 18px;
+            top: 3px;
+            margin: 0px 12px 0 0px;
+            background: url(../img/ico02.png);
+        }
+    }
+    &__btn{
+        display: inline-block;
+        &_item{
+            display: block;
+            width: 153px;
+            height: 47px;
+        }
+    }
+}
+
+.order-list{
+    display: inline-flex;
+    justify-content: space-around;
+    width: 70%;
+    &__item{
+
+    }
+    &--format{
+        font-size: 10px;
+        color: $font;
+    }
+    &__subitem{
+        display: block;
+    }
+}
