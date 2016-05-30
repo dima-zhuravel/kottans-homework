@@ -215,3 +215,356 @@ html{
         font-weight: 400;
     }
 }
+
+.general-title{
+    text-align: center;
+    &__text{
+        display: inline-block;
+        border-bottom: 1px solid $font;
+        padding-bottom: 6px;
+        color: $font;
+        text-transform: uppercase;
+        font-size: 24px;
+    }
+}
+
+.form-services{
+    display: flex;
+    height: 324px;
+    justify-content: space-around;
+    align-items: center;
+    .customRadio{
+        position: relative;
+        display: block;
+        width: 250px;
+        height: 180px;
+        &__label{
+           position: absolute;
+           display: inline-table;
+           width: 100%;
+           height: 100%;
+           bottom: 0px;
+           left: 0px;
+           right: 0px;
+           text-align: center;
+           color: #6E768F;
+           font-weight: 700;
+           font-size: 12px;
+           vertical-align: bottom;
+           padding-top: 57%;
+           border: 1px solid #D5DAE7;
+           border-radius: 7px;
+       }
+    }
+    .website{
+        background: #F7F7FA url(../img/website.png) no-repeat center 24px; 
+    }
+    .documents{
+        background: #F7F7FA url(../img/documents.png) no-repeat center 24px; 
+    }
+    .soccial-accaount{
+        background: #F7F7FA url(../img/socials.png) no-repeat center 24px; 
+    }
+    //34 GS
+}
+
+.form-parts{
+    counter-reset: count-form-parts;
+    padding-left: 52px;
+    padding-right: 52px;
+    h1{
+    color: $font;
+    font-size: 24px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+        &::before{
+            counter-increment: count-form-parts;
+            content: counter(count-form-parts);
+            width: 38px;
+            height: 38px;
+            margin-right: 10px;
+            padding: 3px 10px;
+            border: 1px solid $font;
+            border-radius: 50%;
+            color: $font;
+            font-size: 18px;
+        }  
+    }
+    .file-upload{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 207px;
+        height: 47px;
+        padding-right: 24px;
+        margin-bottom: 34px;
+        @include pref(box-sizing, border-box);
+        border: 2px solid #E9EAEF;
+        border-radius: 7px;
+        cursor: pointer;
+        background: #F7F7FA url(../img/download.png) no-repeat 22px center;
+        &__text{
+            color: $font;
+            font-size: 15px;
+        }
+    }
+    .table{
+        width: 100%;
+        color: $font;
+        text-align: left;
+        clear: both;
+        border-collapse: collapse;
+        border: 1px solid #EBEDF1;
+        background: #FFFFFF;
+        margin-top: 20px;
+        &__del{
+            margin-left: 22px;
+        }
+        th{
+            text-align: left;
+            padding: 20px 10px;
+        }
+        td{
+            text-align: left;
+            padding: 0 10px 10px 10px;
+        }
+        .filename{
+            width: 35%;
+        }
+        .filesize{
+            width: 20%;
+        }
+        .countwords{
+            width: 25%;
+        }
+        .remove{
+            width: 20%;
+        }
+    }
+    .chose-tone{
+        text-transform: uppercase;
+        color: $font;
+        font-size: 14px;
+        .tolan{
+            display: block;
+        }
+        .del-filed{
+            
+        }
+        .lanblock{
+            .from-to{
+                margin-right: 14px;
+                float: left;
+                font-size: 10px;
+                line-height: 34px;
+                margin-left: 15px;
+            }
+            &__to{
+                margin-left: 15px;
+                margin-top: 20px;
+            }
+            .btn{
+                height: 36px;
+                vertical-align: top;
+                &.del-button{
+                    border: none;
+                    margin-right: 10px;
+                }
+                &.addlan-select{
+                    width: 162px;
+                    background: #f7f7fa;
+                }
+            }
+        }
+    }
+    .select-tone{
+        width: 50%;
+        float: left;
+    }
+    .urgent-job{
+        width: 50%;
+        float: right;
+    }
+    .payment-method{
+        clear: both;
+    }
+}
+
+//50 GS
+
+.styled-select{
+    position: relative;
+    width: 240px;
+    height: 34px;
+    overflow: hidden;
+    background: url(../img/arrow-sel.png) no-repeat 94% #F7F7FA;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    display: inline-block;
+    margin-right: 10px;
+    &::after{
+        content: "";
+        border-left: 1px solid #cccccc;
+        height: 34px;
+        position: absolute;
+        top: 0;
+        right: 37px;
+    }
+    .select{
+        background: transparent;
+        width: 268px;
+        padding: 5px;
+        font-size: 14px;
+        line-height: 1;
+        border: 0;
+        border-radius: 0;
+        height: 34px;
+        -webkit-appearance: none;
+        color: $font;
+    }
+}
+
+.urgent-job{
+    #urgent-job{
+        width: 80%;
+        box-sizing: border-box;
+        margin: 0 auto 40px;
+        display: block;
+    }
+}
+
+.timeline-info{
+    width: 100%;
+    background: #FFFFFF;
+    color: $font;
+    border: 1px solid #F1F2F6;
+    padding: 33px 45px;
+    @include pref(box-sizing, border-box);
+    overflow: hidden;
+    &__title{
+        text-transform: uppercase;
+        color: $font;
+        &::before{
+            content: "";
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            margin: 0px 8px -4px 0px;
+            background: url(../img/info.png)no-repeat;
+        }
+    }
+    &__notice{
+        width: 92%;
+        float: right;
+        font-size: 12px;
+        color: #A8B2C5;
+        line-height: 16px;
+        margin-top: 8px;
+        .mark-text{
+            color: $orange;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    }
+}
+
+.pay-method{
+    display: flex;
+    width: 70%;
+    height: 220px;
+    justify-content: space-between;
+    align-items: center;
+    .pay-radio{
+        &__label{
+            position: relative;
+            display: block;
+            width: 200px;
+            height: 92px;
+            border: 1px solid $border;
+            border-radius: 3px;
+            @include pref(box-sizing, border-box);
+        }
+    }
+    .visa{
+        background: url(../img/mastercard.png)no-repeat center;
+    }
+    .paypal{
+        background: url(../img/paypal.png)no-repeat center;
+    }
+    .amazon{
+        background: url(../img/amazon.png)no-repeat center;
+    }
+}
+
+.desired-tone{
+    &__item{
+        position: relative;
+        // width: 212px;
+        // height: 62px; 
+    }
+    &__label{
+        display: block;
+        width: 212px;
+        height: 62px; 
+        border: 1px solid $border;
+        border-radius: 3px;
+        @include pref(box-sizing, border-box);
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+**General Style
+*/
+input[type="radio"]:checked + label {
+    border-color: $blue;
+    border-width: 6px;
+    @include pref(box-sizing, border-box);
+    &::before{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 21px;
+        height: 21px;
+        top: -13px;
+        right: -13px;
+        background: url(../img/check.png)no-repeat;
+    }
+}
+
+input[type="checkbox"]:checked + label {
+    border-color: $blue;
+    border-width: 6px;
+    @include pref(box-sizing, border-box);
+    &::before{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 21px;
+        height: 21px;
+        top: -13px;
+        right: -13px;
+        background: url(../img/check.png)no-repeat;
+    }
+}
+
+.del-button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}

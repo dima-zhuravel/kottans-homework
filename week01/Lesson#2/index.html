@@ -2,7 +2,7 @@
     <meta charset=UTF-8>
     <title>form</title>
     <!-- <link rel=stylesheet href="css/style.css"> -->
-    <link href="css/main.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
     <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
     <div class="main-wrap">
@@ -14,194 +14,204 @@
             <a href=# role=button class="header__item btn header__sign-in">Sign in</a>
         </header>
         
-        <main class="main">
-            <div class=head-form>
-                <article class="head-form__order head-form__item">
-                    <h2 class="head-form__title title-order">Your order</h2>
-                    <ul class="order-list">
-                        <li class="order-list__item">
-                            Items
-                            <span class="order-list__subitem">2 documents</span>
-                        <li class="order-list__item">
-                            Details
-                            <span class="order-list__subitem">2 languages</span>
-                        <li class="order-list__item">
-                            Price
-                            <span class="order-list__subitem">$696.06</span>
-                        <li class="order-list__item">
-                            Delivery
-                            <span class="order-list__subitem">48 hours<sub>*</sub></span>
-                    </ul>
-        
-                    <div class=head-form__btn>
-                        <button class="btn head-form__btn_item btn__place-order">Place order</button>
-                        <button class="btn head-form__btn_item btn__print-quote">Print a quote</button>
-                    </div>
-                </article>
-                <article class="head-form__help head-form__item">
-                    <h2 class="head-form__title title-help">Help Center</h2>
-                    <p class="head-form__help_description">If you need assistance while placing your order, contact one of our beloved Project Manager by phone email</p>
-                    <p class=help-contacts>
-                        <a class="help-contacts__item" href=tel>+971(0)555 555</a>
-                        <a class="help-contacts__item" href="mailto:help@qtest.com">help@qtest.com</a>
-                    </p>
-                </article>
-            </div>
-            <section class=form-section>
-                <h1 class=general-title>    
-                    <span>Select what you want to translate</span>
-                </h1>
-                <div class="fom-services">
-                    <div class="customRadio">
-                        <input type=radio name= id="website">
-                        <img src=# alt=Website>
-                        <p>Website</p>
-                    </div>
-                    <div class="customRadio">
-                        <input type=radio name= id="documents">
-                        <img src=# alt=Documents>
-                        <p>Documents</p>
-                    </div>
-                    <div class="customRadio">
-                        <input type=radio name= id="soccial-accaount">
-                        <img src=# alt="Soccial accaount">
-                        <p>Soccial accaount</p>
-                    </div>
+        <main class=main>
+            <form action=some-acton method=POST name=huge-form class=huge-form>
+                <div class=head-form>
+                    <article class="head-form__order head-form__item">
+                        <h2 class="head-form__title title-order">Your order</h2>
+                        <ul class="order-list">
+                            <li class="order-list__item">
+                                Items
+                                <span class="order-list__subitem">2 documents</span>
+                            <li class="order-list__item">
+                                Details
+                                <span class="order-list__subitem">2 languages</span>
+                            <li class="order-list__item">
+                                Price
+                                <span class="order-list__subitem">$696.06</span>
+                            <li class="order-list__item">
+                                Delivery
+                                <span class="order-list__subitem">48 hours<sub>*</sub></span>
+                        </ul>
+            
+                        <div class=head-form__btn>
+                            <button class="btn head-form__btn_item btn__place-order">Place order</button>
+                            <button class="btn head-form__btn_item btn__print-quote">Print a quote</button>
+                        </div>
+                    </article>
+                    <article class="head-form__help head-form__item">
+                        <h2 class="head-form__title title-help">Help Center</h2>
+                        <p class="head-form__help_description">If you need assistance while placing your order, contact one of our beloved Project Manager by phone email</p>
+                        <p class=help-contacts>
+                            <a class="help-contacts__item" href=tel>+971(0)555 555</a>
+                            <a class="help-contacts__item" href="mailto:help@qtest.com">help@qtest.com</a>
+                        </p>
+                    </article>
                 </div>
-            </section>
-            <form action=# method=# name=huge-form class=huge-form>
-                <section>
-                    <h1>Ulpoad your documents
-                        <small class="order-list--format">(Doc, Docx, text, PDF Markdown)</small>
+                <section class=form-section>
+                    <h1 class=general-title>    
+                        <span class="general-title__text">Select what you want to translate</span>
                     </h1>
-                           
-                    <label class=file-upload>
-                        <span>Upload a new file</span>
-                        <input name=uploadfile multiple=false type=file id="myFile" hidden>
-                    </label> 
-                        
-        
-                    <table class=table>
-                        <thead>
-                            <th class=filename>File Name
-                            <th class=filesize>File Size
-                            <th class=countwords>Number of words
-                            <th class=remove>Remove
-                        </thead>
-                        <tr>
-                            <td>buisness_operations.docx
-                            <td>78kb
-                            <td>842
-                            <td><img src=# alt=buscket>
-                        </tr>
-                        <tr>
-                            <td>buisness_financial.docx
-                            <td>26kb
-                            <td>2,236
-                            <td><img src=# alt=buscket>
-                        </tr>
-                    </table>
+                    <ul class="form-services">
+                        <li class="customRadio website">
+                            <input type="radio" name="radio" id="website" hidden />
+                            <label class="customRadio__label" for="website">Website</label>
+                        </li>
+                        <li class="customRadio documents">
+                            <input type="radio" name="radio" id="documents" hidden/>
+                            <label class="customRadio__label" for="documents">Documents</label>
+                        </li>
+                        <li class="customRadio soccial-accaount">
+                            <input type="radio" name="radio" id="soccial-accaount" hidden />
+                            <label class="customRadio__label" for="soccial-accaount">Soccial accaount</label>
+                        </li>
+                    </ul>
                 </section>
-        
-                <section>
-                    <h1>Choose your desired tone</h1>
-        
-                    <div class=clearfix></div>
-        
-                    <div class=lanblock>
-                        <label for=lanfrom>From</label>
-                        <select name=lanfrom id="lanfrom">
-                            <option value=English>English</option>
-                        </select>
-                        
-                        <label for=tolan>to</label>
-                        <select name=tolan id="tolan">
-                            <option value=Arabic>Arabic</option>
-                        </select>
-                        <select name=tolan id="tolan">
-                            <option value=Kurdish>Kurdish</option>
-                        </select>
-                        
-                        <button class=addlan-select>+ Add</button>
-                    </div>
+            
+                <div class=form-parts>
+                    <section class=upload-doc>
+                        <h1>Ulpoad your documents
+                            <small class="order-list--format">(Doc, Docx, text, PDF Markdown)</small>
+                        </h1>
+                               
+                        <label class=file-upload>
+                            <span class=file-upload__text>Upload a new file</span>
+                            <input name=uploadfile type=file id="myFile" hidden>
+                        </label> 
+                            
+                            
+                        <table class=table>
+                            <tr>
+                                <th class=filename>File Name
+                                <th class=filesize>File Size
+                                <th class=countwords>Number of words
+                                <th class=remove>Remove
+                            </tr>
+                            <tr>
+                                <td>buisness_operations.docx
+                                <td>78kb
+                                <td>842
+                                <td><button class="table__del del-button"><img src="img/buscket.png" alt=bascket /></button>
+                            </tr>
+                            <tr>
+                                <td>buisness_financial.docx
+                                <td>26kb
+                                <td>2,236
+                                <td><button class="table__del del-button"><img src="img/buscket.png" alt=bascket /></button>
+                            </tr>
+                        </table>
+                    </section>
+                            
+                    <section class=chose-tone>
+                        <h1>Choose your desired tone</h1>
+                            
+                        <div class=lanblock>
+                            <label  class="from-to lanblock__from" for=lanfrom>From</label>
+                            <div class="styled-select">
+                                <select class=select name=lanfrom id="lanfrom">
+                                    <option value=English>English</option>
+                                </select>
+                            </div>
+                            
+                            <div class="tolan lanblock__to"> 
+                                <label class="from-to">to</label>
+                                <div class="styled-select">
+                                    <select class=select name=tolan>
+                                        <option value=Arabic>Arabic</option>
+                                    </select>
+                                </div>
+                                <div class="styled-select">
+                                    <select class=select name=tolan>
+                                        <option value=Kurdish>Kurdish</option>
+                                    </select>
+                                </div>
+                                
+                                <button class="btn del-button"><img src="img/buscket.png" alt=bascket /></button>
+                                <button class="btn addlan-select">+ Add</button>
+                            </div>
+                        </div>
+                    </section>
                     
-                </section>
-                
-                <section class=desire-tone>
-                    <h1>Select your desired tone</h1>
-        
-                    <div class=clearfix></div>
-        
-                    <div class=customCheckbox>
-                        <label for=>Friendly / Casual</label>
-                        <input type=checkbox name= id="friendly-casual">
-                    </div>
-                    <div class=customCheckbox>
-                        <label for=>Corporate / Pro</label>
-                        <input type=checkbox name= id="corporate-pro">
-                    </div>
-                    <div class=customCheckbox>
-                        <label for=>Media / Formal</label>
-                        <input type=checkbox name= id="media-formal">
-                    </div>
-                </section>        
-                
-                <section class=urgent-job>
-                    <h1>Tell us how urgent this job is</h1>
-                    <input type=range name=urgent-job id="urgent-job">
-        
-                    <div class=clearfix></div>
-        
-                    <div class=timline-info>
-                        timeline info
-        
-                        <p>With an <span>average</span> timeline set up, our expert translator can take a ressonable amount of time prefecing your translation</p>
-                    </div>
-                </section>    
-        
-                <section class=payment-method>
-                    <h1>Sign up and choose a payment method</h1>
-        
-                    <div class=clearfix></div>
-        
-                    <p>Already have an account with us? <a href=#>Sign in</a></p>
-        
-                    <label for=fullname>Full Name</label>
-                    <input type=text name=fullname id="fullname">
-        
-                    <label for=email>Email Address</label>
-                    <input type=text name=email id="email">
-        
-                    <div class=clearfix></div>
-        
-                    <button>
-                        <img src=# alt=viso>
-                    </button>
-                    <button>
-                        <img src=# alt=paypall>
-                    </button>
-                    <button>
-                        <img src=# alt=amazon>
-                    </button>
-        
-                    <div class=clearfix></div>
-        
-                    <label for=cardnumber>Card Number</label>
-                    <input type=text name=cardnumber id="cardnumber">
-        
-                    <label for=expirydate>Expiry Date</label>
-                    <input type=date name=expirydate id="expirydate">
-        
-                    <label for=code>Code</label>
-                    <input type=text name=code id="code">
+                    <section class=select-tone>
+                        <h1>Select your desired tone</h1>
+                            
+                        <div class=clearfix></div>
+                            
+                        <ul class="desired-tone">
+                            <li class="desired-tone__item casual">
+                                <label class="desired-tone__label" for=friendly-casual>Friendly / Casual</label>
+                                <input type=checkbox name=checkbox id="friendly-casual" hidden>
+                            </li>
+                            <li class="desired-tone__item corpro">
+                                <label class="desired-tone__label" for=corporate-pro>Corporate / Pro</label>
+                                <input type=checkbox name=checkbox id="corporate-pro" hidden>
+                            </li>
+                            <li class=desired-tone__item formal>
+                                <label class="desired-tone__label" for=media-formal>Media / Formal</label>
+                                <input type=checkbox name=checkbox id="media-formal" hidden>
+                            </li>
+                        </ul>
+                    </section>        
                     
-                    <input type=checkbox name=agree id="agree">
-                    <span>I agree to the <a href=#>Terms & Conditions</a></span>
-        
-                    <button>Place Order</button>
-                    <button>Print A Quote</button>
-                </section>  
-        
+                    <section class=urgent-job>
+                        <h1>Tell us how urgent this job is</h1>
+                        <input type=range name=urgent-job id="urgent-job">
+                            
+                        <div class=timeline-info>
+                            <span class="timeline-info__title">timeline info</span>
+                            
+                            <p class="timeline-info__notice">With an <span class="mark-text">average</span> timeline set up, our expert translator can take a ressonable amount of time prefecing your translation</p>
+                        </div>
+                    </section>    
+                            
+                    <section class=payment-method>
+                        <h1>Sign up and choose a payment method</h1>
+                            
+                        <div class=clearfix></div>
+                            
+                        <p>Already have an account with us? <a href=#>Sign in</a></p>
+                            
+                        <label for=fullname>Full Name</label>
+                        <input type=text name=fullname id="fullname">
+                            
+                        <label for=email>Email Address</label>
+                        <input type=text name=email id="email">
+                            
+                        <div class=clearfix></div>
+                            
+                        <ul class="pay-method">
+                            <li class="pay-radio visa">
+                                <input type="radio" name="radio" id="visa" hidden />
+                                <label class="pay-radio__label" for="visa"></label>
+                            </li>
+                            <li class="pay-radio paypal">
+                                <input type="radio" name="radio" id="paypal" hidden/>
+                                <label class="pay-radio__label" for="paypal"></label>
+                            </li>
+                            <li class="pay-radio amazon">
+                                <input type="radio" name="radio" id="amazon" hidden />
+                                <label class="pay-radio__label" for="amazon"></label>
+                            </li>
+                        </ul>
+                            
+                        <div class=clearfix></div>
+                            
+                        <label for=cardnumber>Card Number</label>
+                        <input type=text name=cardnumber id="cardnumber">
+                            
+                        <label for=expirydate>Expiry Date</label>
+                        <input type=text name=expirydate id="expirydate">
+                            
+                        <label for=code>Code</label>
+                        <input type=text name=code id="code">
+                        
+                        <input type=checkbox name=agree id="agree">
+                        <span>I agree to the <a href=#>Terms & Conditions</a></span>
+                            
+                        <button>Place Order</button>
+                        <button>Print A Quote</button>
+                    </section>  
+                </div>
             </form>
         </main>
         
