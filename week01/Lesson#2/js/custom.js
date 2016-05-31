@@ -8,3 +8,9 @@ $('input[name="uploadfile"]').change(function(){
     }
     
 });
+
+//Pass Meter
+$('#pswd').keyup(function() {
+    var pswd = $('#pswd').val().length;
+    var value = $("#checkPswd").attr("value", pswd);
+});

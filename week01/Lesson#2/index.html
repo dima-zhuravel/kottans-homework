@@ -54,16 +54,16 @@
                     </h1>
                     <ul class="form-services">
                         <li class="customRadio website">
-                            <input type="radio" name="radio" id="website" hidden />
-                            <label class="customRadio__label" for="website">Website</label>
+                            <input type=radio name=radio id="website" hidden />
+                            <label class=customRadio__label for=website>Website</label>
                         </li>
                         <li class="customRadio documents">
-                            <input type="radio" name="radio" id="documents" hidden/>
-                            <label class="customRadio__label" for="documents">Documents</label>
+                            <input type=radio name=radio id="documents" hidden/>
+                            <label class=customRadio__label for=documents>Documents</label>
                         </li>
                         <li class="customRadio soccial-accaount">
-                            <input type="radio" name="radio" id="soccial-accaount" hidden />
-                            <label class="customRadio__label" for="soccial-accaount">Soccial accaount</label>
+                            <input type=radio name=radio id="soccial-accaount" hidden />
+                            <label class=customRadio__label for=soccial-accaount>Soccial accaount</label>
                         </li>
                     </ul>
                 </section>
@@ -138,17 +138,17 @@
                         <div class=clearfix></div>
                             
                         <ul class="desired-tone">
-                            <li class="desired-tone__item casual">
-                                <label class="desired-tone__label" for=friendly-casual>Friendly / Casual</label>
+                            <li class="desired-tone__item">
                                 <input type=checkbox name=checkbox id="friendly-casual" hidden>
+                                <label class="desired-tone__label casual" for=friendly-casual>Friendly / Casual</label>
                             </li>
-                            <li class="desired-tone__item corpro">
-                                <label class="desired-tone__label" for=corporate-pro>Corporate / Pro</label>
+                            <li class="desired-tone__item">
                                 <input type=checkbox name=checkbox id="corporate-pro" hidden>
+                                <label class="desired-tone__label corpro" for=corporate-pro>Corporate / Pro</label>
                             </li>
-                            <li class=desired-tone__item formal>
-                                <label class="desired-tone__label" for=media-formal>Media / Formal</label>
+                            <li class="desired-tone__item">
                                 <input type=checkbox name=checkbox id="media-formal" hidden>
+                                <label class="desired-tone__label formal" for=media-formal>Media / Formal</label>
                             </li>
                         </ul>
                     </section>        
@@ -156,6 +156,11 @@
                     <section class=urgent-job>
                         <h1>Tell us how urgent this job is</h1>
                         <input type=range name=urgent-job id="urgent-job">
+                        <p class="range-text">
+                            <span class="extreme">I got time</span>
+                            <span class="central">Avarage</span>
+                            <span class="extreme">Yesterday</span>
+                        </p>
                             
                         <div class=timeline-info>
                             <span class="timeline-info__title">timeline info</span>
@@ -169,47 +174,65 @@
                             
                         <div class=clearfix></div>
                             
-                        <p>Already have an account with us? <a href=#>Sign in</a></p>
+                        <p class="payment-method__quest">Already have an account with us? <a class="payment-method__signin" href=#>Sign in</a></p>
                             
-                        <label for=fullname>Full Name</label>
-                        <input type=text name=fullname id="fullname">
+                        <fieldset class=fullname>
+                            <label for=fullname>Full Name</label>
+                            <input type=text name=fullname id="fullname" required>
+                        </fieldset>
                             
-                        <label for=email>Email Address</label>
-                        <input type=text name=email id="email">
+                        <fieldset class=email>
+                            <label for=email>Email Address</label>
+                            <input type=text name=email id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                        </fieldset>
+
+                        <fieldset class=password>
+                            <label for=password>Chose Password</label>
+                            <input type=password name=password id="pswd" required>
+                            <meter value="0" min="0" low="11" optimum="12" max="24" id="checkPswd"></meter>
+                        </fieldset>
                             
-                        <div class=clearfix></div>
-                            
-                        <ul class="pay-method">
+                        <ul class=pay-method>
                             <li class="pay-radio visa">
-                                <input type="radio" name="radio" id="visa" hidden />
-                                <label class="pay-radio__label" for="visa"></label>
+                                <input type=radio name=radio id="visa" hidden/>
+                                <label class=pay-radio__label for=visa></label>
                             </li>
                             <li class="pay-radio paypal">
-                                <input type="radio" name="radio" id="paypal" hidden/>
-                                <label class="pay-radio__label" for="paypal"></label>
+                                <input type=radio name=radio id="paypal" hidden/>
+                                <label class=pay-radio__label for=paypal></label>
                             </li>
                             <li class="pay-radio amazon">
-                                <input type="radio" name="radio" id="amazon" hidden />
-                                <label class="pay-radio__label" for="amazon"></label>
+                                <input type=radio name=radio id="amazon" hidden />
+                                <label class=pay-radio__label for=amazon></label>
                             </li>
                         </ul>
                             
-                        <div class=clearfix></div>
-                            
-                        <label for=cardnumber>Card Number</label>
-                        <input type=text name=cardnumber id="cardnumber">
-                            
-                        <label for=expirydate>Expiry Date</label>
-                        <input type=text name=expirydate id="expirydate">
-                            
-                        <label for=code>Code</label>
-                        <input type=text name=code id="code">
+                        <div class="card-info">
+                            <fieldset class="cardnumber">
+                                <label for=cardnumber>Card Number</label>
+                                <input type=text name=cardnumber id="cardnumber" pattern="[0-9]{16}" maxlength=16 required>
+                            </fieldset>
+                                
+                            <fieldset class="expirydate">
+                                <label for=expirydate>Expiry Date</label>
+                                <input type=text name=expirydate id="expirydate" pattern="[0-9]{2}/[0-9]{2}"maxlength=5 placeholder="DD / MM / YY" required>
+                            </fieldset>
+                                
+                            <fieldset class="code">
+                                <label for=code>Code</label>
+                                <input type=text name=code id="code"maxlength=3 pattern="[0-9]{3}" required />
+                            </fieldset>
+                        </div>
                         
-                        <input type=checkbox name=agree id="agree">
-                        <span>I agree to the <a href=#>Terms & Conditions</a></span>
-                            
-                        <button>Place Order</button>
-                        <button>Print A Quote</button>
+                        <fieldset class="term-submit">
+                            <input type=checkbox name=agree id="agree">
+                            <small class="term-submit__text">I agree to the <a class="link-condition" href=#>Terms & Conditions</a></small>
+                                
+                            <div class=head-form__btn>
+                                <button class="btn head-form__btn_item btn__place-order">Place order</button>
+                                <button class="btn head-form__btn_item btn__print-quote">Print a quote</button>
+                            </div>
+                        </fieldset>
                     </section>  
                 </div>
             </form>
