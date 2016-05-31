@@ -76,7 +76,7 @@ html{
     .header{
         @include pref(display, flex);
         width: 100%;
-        height: 118px;
+        height: 250px;
         justify-content: space-between;
         align-items: center;
         &__go-back{
@@ -101,7 +101,7 @@ html{
 .main{
     background: #fff;
     border: 1px solid $border;
-    @include pref(border-radius, 7px);
+    @include pref(border-radius, 7px 7px 0px 0px);
 }
 
 .head-form{
@@ -593,6 +593,21 @@ html{
         border-radius: 3px;
         padding-left: 14px;
     }
+    #checkPswd{
+        transform: rotate(-90deg);
+        width: 44px;
+        position: relative;
+        top: 1px;
+        left: -20px;
+    }
+    .fullname,
+    .email,
+    .password{
+        label{
+            margin-bottom: 7px;
+            margin-left: 7px;
+        }
+    }
     .email{
         float: left;
         margin-top: 30px;
@@ -684,19 +699,124 @@ html{
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.footer{
+    height: 376px;
+    width: 100%;
+    background: $foobg;
+    font-family: $ver;
+    .inner-wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1018px;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        padding-top: 100px;
+        color: #B1B7D5;
+        @include pref(box-sizing, border-box);
+        .foo-head{
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 24px;
+        }
+        .foosoccio{
+            display: block;
+            color: #B1B7D5;
+            text-decoration: none;
+            cursor: pointer;
+            margin-bottom: 4px;
+            &:hover{
+                color: #fff;
+            }
+        }
+        .foologo{
+            display: block;
+            width: 91px;
+            height: 91px;
+            background: url(../img/foologo.png);
+        }
+        .what-we-do{
+            &::before{
+                content: "";
+                display: inline-block;
+                width: 21px;
+                height: 19px;
+                background: url(../img/heart.png);
+                position: relative;
+                top: 4px;
+                margin-right: 7px;
+            }
+            &__txt{
+                font-style: italic;
+            }
+        }
+        .our-office{
+            &::before{
+                content: "";
+                display: inline-block;
+                width: 21px;
+                height: 21px;
+                background: url(../img/position.png);
+                position: relative;
+                top: 4px;
+                margin-right: 7px;
+            }
+            &__item{
+                display: block;
+                margin-bottom: 4px;
+            }
+        }
+        .connect-with-us{
+            &::before{
+                content: "";
+                display: inline-block;
+                width: 21px;
+                height: 21px;
+                background: url(../img/network.png);
+                position: relative;
+                top: 4px;
+                margin-right: 7px;
+            }
+        }
+        .facebook{
+            &::before{
+                content: "";
+                display: inline-block;
+                width: 17px;
+                height: 17px;
+                background: url(../img/fb.png);
+                position: relative;
+                top: 4px;
+                margin-right: 7px;
+            }
+        }
+        .twitter{
+            &::before{
+                content: "";
+                display: inline-block;
+                width: 17px;
+                height: 17px;
+                background: url(../img/twitter.png);
+                position: relative;
+                top: 4px;
+                margin-right: 7px;
+            }
+        }
+        .linkedin{
+            &::before{
+                content: "";
+                display: inline-block;
+                width: 17px;
+                height: 17px;
+                background: url(../img/linkedin.png);
+                position: relative;
+                top: 4px;
+                margin-right: 7px;
+            }
+        }
+    }
+}
 
 /*
 **General Style
